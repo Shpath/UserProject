@@ -1,0 +1,88 @@
+@media only screen and (min-width: 320px) {
+    .github-column {
+        display: none;
+    }
+    .email-column {
+        display: none;
+    }
+
+    .lastname-column {
+        display: none;
+    }
+
+    .button-text-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .github-column {
+        display: none;
+    }
+
+    .email-column {
+        display: none;
+    }
+
+    .lastname-column {
+        display: none;
+    }
+
+    .button-text-container {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .github-column {
+        display: none;
+    }
+
+    .email-column {
+        display: none;
+    }
+
+    .lastname-column {
+        display: table-cell;
+    }
+
+    .button-text-container {
+        display: inline;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .github-column {
+        display: table-cell;
+    }
+
+    .email-column {
+        display: table-cell;
+    }
+
+    .lastname-column {
+        display: table-cell;
+    }
+
+    .button-text-container {
+        display: inline;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .github-column {
+        display: table-cell;
+    }
+
+    .email-column {
+        display: table-cell;
+    }
+
+    .lastname-column {
+        display: table-cell;
+    }
+
+    .button-text-container {
+        display: inline;
+    }
+}

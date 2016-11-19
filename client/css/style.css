@@ -1,0 +1,22 @@
+.text-center {
+	text-align: center;
+}
+.margin-top-20 {
+    margin-top: 20px;
+}
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+.no-repositories span {
+    font-size: 15px;
+    margin-left: 10px;
+}
+.error-fetching-results span {
+	font-size: 15px;
+    margin-left: 10px;
+    color: red;
+}
+.container {
+	padding-left: 30px;
+	padding-right: 30px;
+}

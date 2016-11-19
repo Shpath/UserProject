@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-md-12">
+        <a ng-href="/users" class='margin-bottom-20 btn btn-secondary'>Back to Users</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="row" ng-if="userNotFound">
+            <div class="col-md-12">
+                <h2 class="text-center">User not found</h2>
+            </div>
+        </div>
+        <div class="row" ng-if="!userNotFound">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form>
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" ng-model="user.firstName" id="firstname" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" ng-model="user.lastName" id="lastname" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="gitHubId">GitHub ID</label>
+                            <input type="text" ng-model="user.gitHubId" id="gitHubId" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" ng-model="user.email" id="email" class="form-control" readonly>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row margin-top-20">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h3>Repositories of User</h3>
+                    <div ng-if="loadingRepos">
+                        <span> Loading..</span>
+                    </div>
+                    <div ng-if="!noRepositories" class="">
+                        <div class="margin-top-20" ng-repeat="repositorie in repositories">
+                            <ul class="list-group">
+                                <li class="list-group-item" ng-if="repositorie.name"><b>{{repositorie.name}}</b></li>
+                                <li class="list-group-item" ng-if="repositorie.description">{{repositorie.description}}</li>
+                                <li class="list-group-item" ng-if="repositorie.html_url" >Link <a href="{{repositorie.html_url}}">{{repositorie.html_url}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="no-repositories" ng-if="noRepositories">
+                        <span>This user does not has any repositorie</span>
+                    </div>
+                    <div class="error-fetching-results" ng-if="error">
+                        <span>Error while fetching repositories from GitHub!</span>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
